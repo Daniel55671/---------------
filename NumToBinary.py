@@ -13,13 +13,13 @@ binary = number_to_binary(num)
 binary_list = [int(bit) for bit in binary]
 print(binary_list)
 
-for i in range (len(binary_list)): #complement to one
+for i in range (len(binary_list)): #one's complement
     if binary_list[i] == 1:
         binary_list[i] = 0
     else:
         binary_list[i] = 1
 
-#comlement to two 
+#two's complement
 carry = 1
 for y in range (len(binary_list) -1, -1, -1):
     if binary_list[y] == 1 and carry == 1:
@@ -28,7 +28,7 @@ for y in range (len(binary_list) -1, -1, -1):
         binary_list[y] += carry
         carry = 0
 
-print("The binary code of the number you entered in the complement to two's method is {}".format(binary_list))
+print("The binary code of the number you entered in the two's complement method is {}".format(binary_list))
 
         
         
